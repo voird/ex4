@@ -1,4 +1,3 @@
-https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-order-on-mobile-layout
 <!DOCTYPE html>
 <html lang="ru">
     <head>
@@ -14,9 +13,9 @@ https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="header-fluid">
-            <div class="row d-flex border border-success bg-success rounded text-white">
-              <div class="d-flex col-md-9 order-2 px-sm-3 align-items-md-center">
+        <div class="header-fluid gy-5 p-2 m-4 ">
+            <div class="row  d-flex border border-success bg-success rounded text-white">
+              <div class="col d-flex col-md-9 order-2 px-sm-3 align-items-md-center">
                 <div class="sm h-100 py-3">
                 <main>
                   <h1>House</h1>
@@ -24,7 +23,7 @@ https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-
                 </main>
                 </div>
               </div>
-              <div class="col-md-3 order-1 px-sm-3">
+              <div class="col md-3 order-1 bg-light">
                 <div class="h-100 py-3 text-center">
                 <aside>
                     <img src="image2.png" alt="...">
@@ -42,9 +41,8 @@ https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-
                </ul>
             </div>
          </div>
-         <div class="content d-flex flex-wrap justify-content-center bg-success rounded text-white row">
-            <div class="ss">
-                <h1>Список гиперссылок</h1>
+         <div class="container p-5 bg-success text-white rounded"> 
+            <h1>Список гиперссылок</h1>
             <a id="cscs"></a>
             <ol id="all">
                <li><a href=”http://example.com/”>example.com</a></li>
@@ -87,10 +85,9 @@ https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-
                <li><a href=”/news/12”>сокращенная ссылку на внутреннюю</a></li>
             </ol>
          </div>
-         <div class="w-100"></div>
-         <div class="row">
-            <div class=" col-lg-3 col-lg-pull-9">
-                 <a id="tablet"></a>
+        <div class="container d-flex mt-20 mb-20 p-10 flex-column-reverse bg-success rounded">
+         <div class="col-sm-6 order-sm-first order-last p-5 ">
+            <a id="tablet"></a>
                 <table>
                    <tr>
                       <th>Колонка 1</th>
@@ -121,71 +118,69 @@ https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-
                       <td colspan="2"> Ячейка 52 и 53</td>
                    </tr>
                 </table>
-            </div>
-            <div class="w-100"></div>
-            <div class=" col-lg-9 col-lg-push-3">
-                <form action="/" method="POST">
-                    <a id="forma"></a>
-                    <br>
-                    <label> Введите имя:
-                    <br />
-                    <input name="field-name-1" value="имя" /> </label>
-                    <br>
-                    <label> Текстовое поле email:
-                    <br />
-                    <input name="field-email" type="email" placeholder="Введите вашу почту" /> </label>
-                    <br>
-                    <label> Текстовое поле даты:
-                    <br />
-                    <input name="field-date" value="2021-09-01" type="date" /> </label>
-                    <br> Пол:
-                    <br />
-                    <label>
-                    <input type="radio" checked="checked" name="radio-group-1" value="Женский" /> Женский</label>
-                    <br>
-                    <label>
-                    <input type="radio" name="radio-group-1" value="Мужской" /> Мужской</label>
-                    <br>
-                    <label>
-                       Мн выбор из списка:
-                       <br />
-                       <select name="field-name-4[]" multiple="multiple">
-                          <option value="Бессмертие">Бессмертие</option>
-                          <option value="Полет" selected="selected">Полет</option>
-                          <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
-                       </select>
-                    </label>
-                    <br> Конечности:
-                    <br />
-                    <label>
-                    <input type="radio" checked="checked" name="radio-group-1" value="1" /> 1</label>
-                    <br>
-                    <label>
-                    <input type="radio" name="radio-group-1" value="2" /> 2</label>
-                    <br>
-                    <label>
-                    <input type="radio" name="radio-group-1" value="3" /> 3</label>
-                    <br>
-                    <label>
-                    <input type="radio" name="radio-group-1" value="4" /> 4</label>
-                    <br>
-                    <label> Введите Биографию:
-                    <br />
-                    <textarea name="field-name-2">Биография</textarea>
-                    </label>
-                    <br>
-                    <label>
-                    C контрактом ознакомлен(а) 
-                    <input type="checkbox" checked="checked" name="check-1" />
-                    </label> <br>Кнопка отправки формы
-                    <br>
-                    <input type="submit" value="Отправить" /> 
-                 </form>
-            </div>
-          </div>
          </div>
-         <footer>
+         <div class="col-sm-6 order-sm-last order-first p-5">
+            <form action="/" method="POST">
+               <a id="forma"></a>
+               <br>
+               <label> Введите имя:
+               <br />
+               <input name="field-name-1" value="имя" /> </label>
+               <br>
+               <label> Текстовое поле email:
+               <br />
+               <input name="field-email" type="email" placeholder="Введите вашу почту" /> </label>
+               <br>
+               <label> Текстовое поле даты:
+               <br />
+               <input name="field-date" value="2021-09-01" type="date" /> </label>
+               <br> Пол:
+               <br />
+               <label>
+               <input type="radio" checked="checked" name="radio-group-1" value="Женский" /> Женский</label>
+               <br>
+               <label>
+               <input type="radio" name="radio-group-1" value="Мужской" /> Мужской</label>
+               <br>
+               <label>
+                  Мн выбор из списка:
+                  <br />
+                  <select name="field-name-4[]" multiple="multiple">
+                     <option value="Бессмертие">Бессмертие</option>
+                     <option value="Полет" selected="selected">Полет</option>
+                     <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
+                  </select>
+               </label>
+               <br> Конечности:
+               <br />
+               <label>
+               <input type="radio" checked="checked" name="radio-group-1" value="1" /> 1</label>
+               <br>
+               <label>
+               <input type="radio" name="radio-group-1" value="2" /> 2</label>
+               <br>
+               <label>
+               <input type="radio" name="radio-group-1" value="3" /> 3</label>
+               <br>
+               <label>
+               <input type="radio" name="radio-group-1" value="4" /> 4</label>
+               <br>
+               <label> Введите Биографию:
+               <br />
+               <textarea name="field-name-2">Биография</textarea>
+               </label>
+               <br>
+               <label>
+               C контрактом ознакомлен(а) 
+               <input type="checkbox" checked="checked" name="check-1" />
+               </label> <br>Кнопка отправки формы
+               <br>
+               <input type="submit" value="Отправить" /> 
+            </form>
+         </div>
+      </div>
+         <div class = "footer-fluid bg-success rounded text-white m-3 ">
             (с) Сторожева Полина 2022 
-         </footer>
+         </div>
         </body>
 </html>
