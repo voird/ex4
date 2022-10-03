@@ -1,21 +1,23 @@
+https://stackoverflow.com/questions/20171408/how-do-i-change-bootstrap-3-column-order-on-mobile-layout
 <!DOCTYPE html>
 <html lang="ru">
     <head>
         <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
       <meta charset="utf-8">
       <title>House site</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="./index_files/jquery-3.3.1.slim.min.js.Без названия"></script>
-      <script src="./index_files/popper.min.js.Без названия"></script>
-      <link rel="stylesheet" href="./index_files/bootstrap.min.css">
-      <script src="./index_files/bootstrap.min.js.Без названия"></script>
-  
     </head>
     <body>
-        <div class="header">
+        <div class="header-fluid">
             <div class="row d-flex border border-success bg-success rounded text-white">
-              <div class="col-md-9 order-2 px-sm-3">
-                <div class="h-100 py-3 ">
+              <div class="d-flex col-md-9 order-2 px-sm-3 align-items-md-center">
+                <div class="sm h-100 py-3">
                 <main>
                   <h1>House</h1>
                   <p>Добро пожаловать на сайт</p>
@@ -23,8 +25,9 @@
                 </div>
               </div>
               <div class="col-md-3 order-1 px-sm-3">
-                <div class="h-100 py-3">
+                <div class="h-100 py-3 text-center">
                 <aside>
+                    <img src="image2.png" alt="...">
                 </aside>
                 </div>
               </div>
@@ -39,7 +42,7 @@
                </ul>
             </div>
          </div>
-         <div class="content  d-flex flex-wrap justify-content-center bg-success rounded text-white">
+         <div class="content d-flex flex-wrap justify-content-center bg-success rounded text-white row">
             <div class="ss">
                 <h1>Список гиперссылок</h1>
             <a id="cscs"></a>
@@ -83,99 +86,103 @@
                <li><a href=”/”>сокращенная на главную</a></li>
                <li><a href=”/news/12”>сокращенная ссылку на внутреннюю</a></li>
             </ol>
-        </div>
-        <div class="table justify-content-center">
-            <a id="tablet"></a>
-            <table>
-               <tr>
-                  <th>Колонка 1</th>
-                  <th>Колонка 2</th>
-                  <th>Колонка 3</th>
-               </tr>
-               <tr>
-                  <td>Ячейка 11</td>
-                  <td>Ячейка 12</td>
-                  <td>Ячейка 13</td>
-               </tr>
-               <tr>
-                  <td colspan="2">Ячейка 21 и 22</td>
-                  <td>Ячейка 23</td>
-               </tr>
-               <tr>
-                  <td>Ячейка 31</td>
-                  <td>Ячейка 32</td>
-                  <td>Ячейка 33</td>
-               </tr>
-               <tr>
-                  <td>Ячейка 41</td>
-                  <td>Ячейка 42</td>
-                  <td>Ячейка 43</td>
-               </tr>
-               <tr>
-                  <td>Ячейка 51</td>
-                  <td colspan="2"> Ячейка 52 и 53</td>
-               </tr>
-            </table>
-        </div>
-        <div class="form">
-            <form action="/" method="POST">
-               <a id="forma"></a>
-               <br>
-               <label> Введите имя:
-               <br />
-               <input name="field-name-1" value="имя" /> </label>
-               <br>
-               <label> Текстовое поле email:
-               <br />
-               <input name="field-email" type="email" placeholder="Введите вашу почту" /> </label>
-               <br>
-               <label> Текстовое поле даты:
-               <br />
-               <input name="field-date" value="2021-09-01" type="date" /> </label>
-               <br> Пол:
-               <br />
-               <label>
-               <input type="radio" checked="checked" name="radio-group-1" value="Женский" /> Женский</label>
-               <br>
-               <label>
-               <input type="radio" name="radio-group-1" value="Мужской" /> Мужской</label>
-               <br>
-               <label>
-                  Мн выбор из списка:
-                  <br />
-                  <select name="field-name-4[]" multiple="multiple">
-                     <option value="Бессмертие">Бессмертие</option>
-                     <option value="Полет" selected="selected">Полет</option>
-                     <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
-                  </select>
-               </label>
-               <br> Конечности:
-               <br />
-               <label>
-               <input type="radio" checked="checked" name="radio-group-1" value="1" /> 1</label>
-               <br>
-               <label>
-               <input type="radio" name="radio-group-1" value="2" /> 2</label>
-               <br>
-               <label>
-               <input type="radio" name="radio-group-1" value="3" /> 3</label>
-               <br>
-               <label>
-               <input type="radio" name="radio-group-1" value="4" /> 4</label>
-               <br>
-               <label> Введите Биографию:
-               <br />
-               <textarea name="field-name-2">Биография</textarea>
-               </label>
-               <br>
-               <label>
-               C контрактом ознакомлен(а) 
-               <input type="checkbox" checked="checked" name="check-1" />
-               </label> <br>Кнопка отправки формы
-               <br>
-               <input type="submit" value="Отправить" /> 
-            </form>
+         </div>
+         <div class="w-100"></div>
+         <div class="row">
+            <div class=" col-lg-3 col-lg-pull-9">
+                 <a id="tablet"></a>
+                <table>
+                   <tr>
+                      <th>Колонка 1</th>
+                      <th>Колонка 2</th>
+                      <th>Колонка 3</th>
+                   </tr>
+                   <tr>
+                      <td>Ячейка 11</td>
+                      <td>Ячейка 12</td>
+                      <td>Ячейка 13</td>
+                   </tr>
+                   <tr>
+                      <td colspan="2">Ячейка 21 и 22</td>
+                      <td>Ячейка 23</td>
+                   </tr>
+                   <tr>
+                      <td>Ячейка 31</td>
+                      <td>Ячейка 32</td>
+                      <td>Ячейка 33</td>
+                   </tr>
+                   <tr>
+                      <td>Ячейка 41</td>
+                      <td>Ячейка 42</td>
+                      <td>Ячейка 43</td>
+                   </tr>
+                   <tr>
+                      <td>Ячейка 51</td>
+                      <td colspan="2"> Ячейка 52 и 53</td>
+                   </tr>
+                </table>
             </div>
+            <div class="w-100"></div>
+            <div class=" col-lg-9 col-lg-push-3">
+                <form action="/" method="POST">
+                    <a id="forma"></a>
+                    <br>
+                    <label> Введите имя:
+                    <br />
+                    <input name="field-name-1" value="имя" /> </label>
+                    <br>
+                    <label> Текстовое поле email:
+                    <br />
+                    <input name="field-email" type="email" placeholder="Введите вашу почту" /> </label>
+                    <br>
+                    <label> Текстовое поле даты:
+                    <br />
+                    <input name="field-date" value="2021-09-01" type="date" /> </label>
+                    <br> Пол:
+                    <br />
+                    <label>
+                    <input type="radio" checked="checked" name="radio-group-1" value="Женский" /> Женский</label>
+                    <br>
+                    <label>
+                    <input type="radio" name="radio-group-1" value="Мужской" /> Мужской</label>
+                    <br>
+                    <label>
+                       Мн выбор из списка:
+                       <br />
+                       <select name="field-name-4[]" multiple="multiple">
+                          <option value="Бессмертие">Бессмертие</option>
+                          <option value="Полет" selected="selected">Полет</option>
+                          <option value="Прохождение сквозь стены" selected="selected">Прохождение сквозь стены</option>
+                       </select>
+                    </label>
+                    <br> Конечности:
+                    <br />
+                    <label>
+                    <input type="radio" checked="checked" name="radio-group-1" value="1" /> 1</label>
+                    <br>
+                    <label>
+                    <input type="radio" name="radio-group-1" value="2" /> 2</label>
+                    <br>
+                    <label>
+                    <input type="radio" name="radio-group-1" value="3" /> 3</label>
+                    <br>
+                    <label>
+                    <input type="radio" name="radio-group-1" value="4" /> 4</label>
+                    <br>
+                    <label> Введите Биографию:
+                    <br />
+                    <textarea name="field-name-2">Биография</textarea>
+                    </label>
+                    <br>
+                    <label>
+                    C контрактом ознакомлен(а) 
+                    <input type="checkbox" checked="checked" name="check-1" />
+                    </label> <br>Кнопка отправки формы
+                    <br>
+                    <input type="submit" value="Отправить" /> 
+                 </form>
+            </div>
+          </div>
          </div>
          <footer>
             (с) Сторожева Полина 2022 
